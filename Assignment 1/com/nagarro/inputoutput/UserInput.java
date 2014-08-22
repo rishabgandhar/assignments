@@ -14,7 +14,7 @@ import com.nagarro.constant.Constants;
  *
  */
 public class UserInput {
-	static BufferedReader bufferedReader;
+	private static BufferedReader bufferedReader;
 	
 	/**
 	 * This method takes the input from the user and returns that input
