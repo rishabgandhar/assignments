@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import com.nagarro.dao.FlightDAO;
 import com.nagarro.dao.FlightDAOImpl;
@@ -26,13 +25,22 @@ public class FlightServiceImpl implements FlightService {
 	/** The flightdao. */
 	private FlightDAO flightdao = new FlightDAOImpl();
 
+	private static FlightService flightService = new FlightServiceImpl();
+
+	private FlightServiceImpl() {
+	}
+
+	public static FlightService getInstance() {
+		return flightService;
+	}
 	/**
 	 * 
-	 * @see com.nagarro.service.FlightService#setMap(java.util.Map)
+	 * @see com.nagarro.service.FlightService#setList(java.util.Map)
 	 */
 	@Override
-	public void setMap(Map<String, List<Flight>> map) {
-		flightdao.setMap(map);
+	public void setList(List<Flight> flights) {
+
+		flightdao.setList(flights);
 	}
 
 	/**
@@ -54,14 +62,6 @@ public class FlightServiceImpl implements FlightService {
 			}
 		}
 		return flights;
-	}
-
-	/**
-	 * @see com.nagarro.service.FlightService#getMap()
-	 */
-	@Override
-	public Map<String, List<Flight>> getMap() {
-		return flightdao.getMap();
 	}
 
 	/**

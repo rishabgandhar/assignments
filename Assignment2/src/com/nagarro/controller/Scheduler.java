@@ -11,28 +11,14 @@ import java.util.TimerTask;
 
 import com.nagarro.inputoutput.CSVReader;
 import com.nagarro.inputoutput.UserOutput;
-import com.nagarro.service.FlightService;
 
 /**
  * The Class Scheduler.
  */
 public class Scheduler extends TimerTask {
 
-	/** The flight service. */
-	FlightService flightService;
-	
 	/** The reader. */
 	CSVReader reader = new CSVReader();
-
-	/**
-	 * Instantiates a new scheduler.
-	 *
-	 * @param flightService
-	 *            the flight service
-	 */
-	public Scheduler(FlightService flightService) {
-		this.flightService = flightService;
-	}
 
 	/**
 	 * @see java.util.TimerTask#run()
@@ -40,7 +26,7 @@ public class Scheduler extends TimerTask {
 	@Override
 	public void run() {
 		try {
-			reader.read(flightService);
+			reader.read();
 		} catch (FileNotFoundException e) {
 			UserOutput.display(FILE_NOT_FOUND);
 		} catch (IOException e) {

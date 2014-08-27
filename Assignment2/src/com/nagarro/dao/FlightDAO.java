@@ -1,7 +1,6 @@
 package com.nagarro.dao;
 
 import java.util.List;
-import java.util.Map;
 
 import com.nagarro.model.Flight;
 
@@ -16,7 +15,7 @@ public interface FlightDAO {
 	 * @param map
 	 *            the map
 	 */
-	public void setMap(Map<String, List<Flight>> map);
+	public void setList(List<Flight> map);
 
 	/**
 	 * Gets the list.
@@ -26,12 +25,5 @@ public interface FlightDAO {
 	 * @return the list
 	 */
 	public List<Flight> getList(String key);
-
-	/**
-	 * Gets the map.
-	 *
-	 * @return the map
-	 */
-	public Map<String, List<Flight>> getMap();
 
 }

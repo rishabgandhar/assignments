@@ -1,7 +1,6 @@
 package com.nagarro.service;
 
 import java.util.List;
-import java.util.Map;
 
 import com.nagarro.model.Flight;
 
@@ -16,8 +15,8 @@ public interface FlightService {
 	 * @param map
 	 *            the map
 	 */
-	public void setMap(Map<String, List<Flight>> map);
-	
+	public void setList(List<Flight> map);
+
 	/**
 	 * Gets the sorted list.
 	 *
@@ -28,13 +27,6 @@ public interface FlightService {
 	 * @return the sorted list
 	 */
 	public List<Flight> getSortedList(String key, String userInput);
-
-	/**
-	 * Gets the map.
-	 *
-	 * @return the map
-	 */
-	public Map<String, List<Flight>> getMap();
 
 	/**
 	 * Gets the valid flights.

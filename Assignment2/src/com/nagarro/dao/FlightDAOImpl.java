@@ -1,9 +1,11 @@
 package com.nagarro.dao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.nagarro.constants.CSVReaderConstants;
 import com.nagarro.model.Flight;
 
 /**
@@ -12,14 +14,26 @@ import com.nagarro.model.Flight;
 public class FlightDAOImpl implements FlightDAO {
 
 	/** The map. */
-	private Map<String, List<Flight>> map = new HashMap<String, List<Flight>>();
+	private Map<String, List<Flight>> flightMap = new HashMap<String, List<Flight>>();
 
 	/**
-	 * @see com.nagarro.dao.FlightDAO#setMap(java.util.Map)
+	 * @see com.nagarro.dao.FlightDAO#setList(java.util.Map)
 	 */
 	@Override
-	public void setMap(Map<String, List<Flight>> map) {
-		this.map = map;
+	public void setList(List<Flight> flights) {
+		for (Flight flight : flights) {
+			String key = flight.getFlightDeparture()
+					+ CSVReaderConstants.DELIMITER + flight.getFlightArrival()
+					+ CSVReaderConstants.DELIMITER + flight.getFlightClass();
+			List<Flight> existingFlights = flightMap.get(key);
+			if (existingFlights == null) {
+				existingFlights = new ArrayList<>();
+				existingFlights.add(flight);
+				flightMap.put(key, existingFlights);
+			} else {
+				existingFlights.add(flight);
+			}
+		}
 	}
 
 	/**
@@ -27,15 +41,6 @@ public class FlightDAOImpl implements FlightDAO {
 	 */
 	@Override
 	public List<Flight> getList(String key) {
-		return map.get(key);
+		return flightMap.get(key);
 	}
-
-	/**
-	 * @see com.nagarro.dao.FlightDAO#getMap()
-	 */
-	@Override
-	public Map<String, List<Flight>> getMap() {
-		return map;
-	}
-
 }
