@@ -1,15 +1,13 @@
 package com.nagarro.util;
 
 import static com.nagarro.constants.ConsoleMessages.WRONG_OPTION;
-import static com.nagarro.constants.StringConstants.INITIALIZE_STRING;
-import static com.nagarro.constants.StringConstants.NO_OPTION;
-import static com.nagarro.constants.StringConstants.YES_OPTION;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 import com.nagarro.constants.ConsoleMessages;
+import com.nagarro.constants.GenericConstants;
 
 
 /**
@@ -25,7 +23,7 @@ public class ConsoleInput {
 	private static String inputData() {
 		BufferedReader bufferedreader = new BufferedReader(
 				new InputStreamReader(System.in));
-		String userInput = INITIALIZE_STRING;
+		String userInput = GenericConstants.INITIALIZE_STRING;
 		try {
 			userInput = bufferedreader.readLine();
 		} catch (IOException e) {
@@ -40,7 +38,7 @@ public class ConsoleInput {
 	 * @return the dep stn
 	 */
 	public static String getDepStn() {
-		String depStn = INITIALIZE_STRING;
+		String depStn = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_DEP_STN);
 			depStn = inputData();
@@ -61,7 +59,7 @@ public class ConsoleInput {
 	 * @return the arr stn
 	 */
 	public static String getArrStn() {
-		String arrStn = INITIALIZE_STRING;
+		String arrStn = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_ARR_STN);
 			arrStn = inputData();
@@ -82,7 +80,7 @@ public class ConsoleInput {
 	 * @return the flight class
 	 */
 	public static String getFlightClass() {
-		String flightClass = INITIALIZE_STRING;
+		String flightClass = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_FLIGHT_CLASS);
 			flightClass = inputData();
@@ -103,7 +101,7 @@ public class ConsoleInput {
 	 * @return the sort option
 	 */
 	public static String getSortOption() {
-		String sortOption = INITIALIZE_STRING;
+		String sortOption = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_SORT_OPTION);
 			sortOption = inputData();
@@ -124,7 +122,7 @@ public class ConsoleInput {
 	 * @return the journey date
 	 */
 	public static String getJourneyDate() {
-		String date = INITIALIZE_STRING;
+		String date = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_FLIGHT_DATE);
 			date = inputData();
@@ -145,12 +143,12 @@ public class ConsoleInput {
 	 * @return the user option
 	 */
 	public static String getUserOption() {
-		String option = INITIALIZE_STRING;
+		String option = GenericConstants.INITIALIZE_STRING;
 		while(true) {
 			System.out.println(ConsoleMessages.ASK_OTHER_QUERY);
 			option = inputData();
-			if (option.equalsIgnoreCase(YES_OPTION)
-					|| option.equalsIgnoreCase(NO_OPTION)) {
+			if (option.equalsIgnoreCase(GenericConstants.YES_OPTION)
+					|| option.equalsIgnoreCase(GenericConstants.NO_OPTION)) {
 				break;
 			} else {
 				System.out.println(WRONG_OPTION);

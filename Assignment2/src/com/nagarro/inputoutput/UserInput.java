@@ -1,8 +1,8 @@
 package com.nagarro.inputoutput;
 
-import static com.nagarro.constants.StringConstants.DELIMITER;
-import static com.nagarro.constants.StringConstants.YES_OPTION;
+import static com.nagarro.constants.CSVReaderConstants.DELIMITER;
 
+import com.nagarro.constants.GenericConstants;
 import com.nagarro.util.ConsoleInput;
 
 /**
@@ -21,9 +21,9 @@ public class UserInput {
 		String flightDate = ConsoleInput.getJourneyDate();
 		String flightClass = ConsoleInput.getFlightClass();
 		String sortOption = ConsoleInput.getSortOption();
-		String finalInputString = departureStation + DELIMITER
-				+ arrivalStation + DELIMITER + flightClass
-				+ DELIMITER + flightDate + DELIMITER + sortOption;
+		String finalInputString = departureStation + DELIMITER + arrivalStation
+				+ DELIMITER + flightClass + DELIMITER + flightDate + DELIMITER
+				+ sortOption;
 		return finalInputString;
 	}
 
@@ -35,7 +35,7 @@ public class UserInput {
 	public static boolean hasMoreQueries() {
 		boolean status;
 		String option = ConsoleInput.getUserOption();
-		if (option.equalsIgnoreCase(YES_OPTION)) {
+		if (option.equalsIgnoreCase(GenericConstants.YES_OPTION)) {
 			status = true;
 		} else {
 			status = false;

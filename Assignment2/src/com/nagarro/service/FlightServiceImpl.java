@@ -1,8 +1,8 @@
 package com.nagarro.service;
 
-import static com.nagarro.constants.StringConstants.DATE_FORMAT;
-import static com.nagarro.constants.StringConstants.DELIMITER;
-import static com.nagarro.constants.StringConstants.OPTION_A;
+import static com.nagarro.constants.CSVReaderConstants.DATE_FORMAT;
+import static com.nagarro.constants.CSVReaderConstants.DELIMITER;
+import static com.nagarro.constants.CSVReaderConstants.OPTION_A;
 
 import java.text.DateFormat;
 import java.text.ParseException;

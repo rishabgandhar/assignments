@@ -1,19 +1,16 @@
 package com.nagarro.inputoutput;
 
+import static com.nagarro.constants.CSVReaderConstants.DELIMITER;
+import static com.nagarro.constants.CSVReaderConstants.FILE_EXTENSION;
+import static com.nagarro.constants.CSVReaderConstants.FILE_PATH;
+import static com.nagarro.constants.CSVReaderConstants.FIRST_LINE;
+import static com.nagarro.constants.CSVReaderConstants.SPLITTER;
 import static com.nagarro.constants.CharConstants.BUSINESS;
 import static com.nagarro.constants.NumericConstants.ARR_INDEX;
 import static com.nagarro.constants.NumericConstants.BUSINESS_FARE_INCREMENT;
 import static com.nagarro.constants.NumericConstants.CLASS_INDEX;
 import static com.nagarro.constants.NumericConstants.DEP_INDEX;
 import static com.nagarro.constants.NumericConstants.TOTAL_TOKENS;
-import static com.nagarro.constants.StringConstants.DATE_FORMAT;
-import static com.nagarro.constants.StringConstants.DELIMITER;
-import static com.nagarro.constants.StringConstants.FILE_EXTENSION;
-import static com.nagarro.constants.StringConstants.FILE_PATH;
-import static com.nagarro.constants.StringConstants.FIRST_LINE;
-import static com.nagarro.constants.StringConstants.INITIALIZE_STRING;
-import static com.nagarro.constants.StringConstants.SPLITTER;
-import static com.nagarro.constants.StringConstants.YES_OPTION;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -31,6 +28,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.nagarro.constants.CSVReaderConstants;
+import com.nagarro.constants.GenericConstants;
 import com.nagarro.model.Flight;
 import com.nagarro.service.FlightService;
 
@@ -59,7 +58,7 @@ public class CSVReader {
 		try {
 			String dateStr = data[3];
 			DateFormat formatter;
-			formatter = new SimpleDateFormat(DATE_FORMAT);
+			formatter = new SimpleDateFormat(CSVReaderConstants.DATE_FORMAT);
 			flight.setValidTill((Date) formatter.parse(dateStr));
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -68,7 +67,7 @@ public class CSVReader {
 		flight.setFlightDuration(Double.parseDouble(data[5]));
 		flight.setFlightFare(Double.parseDouble(data[6]));
 		flight.setFlightClass(data[8]);
-		if (data[7].equalsIgnoreCase(YES_OPTION)) {
+		if (GenericConstants.YES_OPTION.equalsIgnoreCase(data[7])) {
 			flight.setFlightAvailability(true);
 		} else {
 			flight.setFlightAvailability(false);
@@ -104,7 +103,7 @@ public class CSVReader {
 					FileReader fr = new FileReader(currentFile);
 					BufferedReader bufferedReader = new BufferedReader(fr);
 					String key;
-					String line = INITIALIZE_STRING;
+					String line = GenericConstants.INITIALIZE_STRING;
 					while ((line = bufferedReader.readLine()) != null) {
 						if (line.startsWith(FIRST_LINE)) {
 							continue;
