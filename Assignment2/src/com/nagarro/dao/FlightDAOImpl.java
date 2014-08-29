@@ -28,14 +28,16 @@ public class FlightDAOImpl implements FlightDAO {
 				existingFlights.add(flight);
 				flightMap.put(key, existingFlights);
 			} else {
-				if (notExists(flight, existingFlights)) {
+				if (!exists(flight, existingFlights)) {
 					existingFlights.add(flight);
+				} else {
+					System.out.println("Flight Already Exists in Database");
 				}
 			}
 		}
 	}
 
-	private boolean notExists(Flight flight, List<Flight> existingFlights) {
+	private boolean exists(Flight flight, List<Flight> existingFlights) {
 		boolean existingFlight = false;
 		for (Flight currentFlight : existingFlights) {
 			if (currentFlight.getFlightNumber().equalsIgnoreCase(
@@ -45,6 +47,7 @@ public class FlightDAOImpl implements FlightDAO {
 					&& currentFlight.getFlightClass().equalsIgnoreCase(
 							flight.getFlightClass())) {
 				existingFlight = true;
+				break;
 			}
 		}
 		return existingFlight;

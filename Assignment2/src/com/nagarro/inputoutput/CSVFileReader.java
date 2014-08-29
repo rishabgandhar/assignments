@@ -110,7 +110,7 @@ public class CSVFileReader {
 								}
 							}
 						} catch (Exception e) {
-							e.printStackTrace();
+							System.out.println(e.getMessage());
 						}
 					}
 					fileMap.put(currentFile,
@@ -160,7 +160,7 @@ public class CSVFileReader {
 		if (airline[0].length() != 5) {
 			isValid = false;
 		}
-		if (airline[1].length() != 3 && airline[2].length() != 3) {
+		if (airline[1].length() != 3 || airline[2].length() != 3) {
 			isValid = false;
 		}
 		try {
