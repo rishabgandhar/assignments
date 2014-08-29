@@ -28,9 +28,26 @@ public class FlightDAOImpl implements FlightDAO {
 				existingFlights.add(flight);
 				flightMap.put(key, existingFlights);
 			} else {
-				existingFlights.add(flight);
+				if (notExists(flight, existingFlights)) {
+					existingFlights.add(flight);
+				}
 			}
 		}
+	}
+
+	private boolean notExists(Flight flight, List<Flight> existingFlights) {
+		boolean existingFlight = false;
+		for (Flight currentFlight : existingFlights) {
+			if (currentFlight.getFlightNumber().equalsIgnoreCase(
+					flight.getFlightNumber())
+					&& currentFlight.getFlightTime().equalsIgnoreCase(
+							flight.getFlightTime())
+					&& currentFlight.getFlightClass().equalsIgnoreCase(
+							flight.getFlightClass())) {
+				existingFlight = true;
+			}
+		}
+		return existingFlight;
 	}
 
 	@Override

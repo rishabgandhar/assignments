@@ -31,8 +31,6 @@ import com.nagarro.util.DateParser;
  */
 public class CSVFileReader {
 
-	/** The file map. */
-
 	/** The files. */
 	private Map<File, Date> fileMap = new HashMap<>();
 
@@ -107,6 +105,7 @@ public class CSVFileReader {
 										.length(); index++) {
 									Flight flight = getInstance(airlineData,
 											index);
+									// if()
 									flights.add(flight);
 								}
 							}
