@@ -1,15 +1,12 @@
 package com.nagarro.controller;
 
-import static com.nagarro.constants.ConsoleMessages.FILE_NOT_FOUND;
 import static com.nagarro.constants.NumericConstants.DELAY;
 import static com.nagarro.constants.NumericConstants.START_TIME;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.nagarro.inputoutput.CSVReader;
+import com.nagarro.inputoutput.CSVFileReader;
 import com.nagarro.inputoutput.UserOutput;
 
 /**
@@ -17,20 +14,18 @@ import com.nagarro.inputoutput.UserOutput;
  */
 public class Scheduler extends TimerTask {
 
-	/** The reader. */
-	CSVReader reader = new CSVReader();
+	/** The csv filereader. */
+	CSVFileReader csvFilereader = new CSVFileReader();
 
-	/**
+	/* (non-Javadoc)
 	 * @see java.util.TimerTask#run()
 	 */
 	@Override
 	public void run() {
 		try {
-			reader.read();
-		} catch (FileNotFoundException e) {
-			UserOutput.display(FILE_NOT_FOUND);
-		} catch (IOException e) {
-			UserOutput.display(FILE_NOT_FOUND);
+			csvFilereader.read();
+		} catch (Exception e) {
+			UserOutput.display(e.getMessage());
 		}
 	}
 

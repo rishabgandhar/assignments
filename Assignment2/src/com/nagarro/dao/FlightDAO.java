@@ -10,10 +10,10 @@ import com.nagarro.model.Flight;
 public interface FlightDAO {
 
 	/**
-	 * Sets the map.
+	 * Sets the list.
 	 *
 	 * @param map
-	 *            the map
+	 *            the new list
 	 */
 	public void setList(List<Flight> map);
 

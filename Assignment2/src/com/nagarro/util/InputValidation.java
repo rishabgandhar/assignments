@@ -1,10 +1,5 @@
 package com.nagarro.util;
 
-import static com.nagarro.constants.ConsoleMessages.WRONG_CLASS;
-import static com.nagarro.constants.ConsoleMessages.WRONG_DATE;
-import static com.nagarro.constants.ConsoleMessages.WRONG_DEP_STN;
-import static com.nagarro.constants.ConsoleMessages.WRONG_SORT_OPTN;
-import static com.nagarro.constants.NumericConstants.STN_NAME_LENGTH;
 import static com.nagarro.constants.CSVReaderConstants.BUSINESS;
 import static com.nagarro.constants.CSVReaderConstants.DATE_FORMAT;
 import static com.nagarro.constants.CSVReaderConstants.DELIMITER;
@@ -12,6 +7,11 @@ import static com.nagarro.constants.CSVReaderConstants.ECONOMIC;
 import static com.nagarro.constants.CSVReaderConstants.OPTION_A;
 import static com.nagarro.constants.CSVReaderConstants.OPTION_B;
 import static com.nagarro.constants.CSVReaderConstants.STN_NAME_EXPR;
+import static com.nagarro.constants.ConsoleMessages.WRONG_CLASS;
+import static com.nagarro.constants.ConsoleMessages.WRONG_DATE;
+import static com.nagarro.constants.ConsoleMessages.WRONG_DEP_STN;
+import static com.nagarro.constants.ConsoleMessages.WRONG_SORT_OPTN;
+import static com.nagarro.constants.NumericConstants.STN_NAME_LENGTH;
 
 import java.text.DateFormat;
 import java.text.ParseException;

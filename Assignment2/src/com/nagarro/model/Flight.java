@@ -42,19 +42,19 @@ public class Flight implements Comparable<Flight> {
 	private String flightClass;
 
 	/**
-	 * Gets the flight name.
+	 * Gets the airline name.
 	 *
-	 * @return the flight name
+	 * @return the airline name
 	 */
 	public String getAirlineName() {
 		return airlineName;
 	}
 
 	/**
-	 * Sets the flight name.
+	 * Sets the airline name.
 	 *
 	 * @param flightName
-	 *            the new flight name
+	 *            the new airline name
 	 */
 	public void setAirlineName(String flightName) {
 		this.airlineName = flightName;
@@ -231,8 +231,7 @@ public class Flight implements Comparable<Flight> {
 		this.flightClass = flightClass;
 	}
 
-	/**
-	 * 
+	/* (non-Javadoc)
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	@Override

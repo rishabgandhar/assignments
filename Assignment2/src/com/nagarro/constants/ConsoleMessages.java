@@ -64,4 +64,10 @@ public class ConsoleMessages {
 
 	/** The Constant GOODBYE. */
 	public static final String GOODBYE = "Thanks For visiting !!";
+
+	/** The Constant INVAILD_FLIGHT_DETAILS. */
+	public static final String INVAILD_FLIGHT_DETAILS = "Invalid Flight Details in row : ";
+
+	/** The Constant INVALID_FOLDER_LOCATION. */
+	public static final String INVALID_FOLDER_LOCATION = "Invalid folder path given for CSV Files";
 }

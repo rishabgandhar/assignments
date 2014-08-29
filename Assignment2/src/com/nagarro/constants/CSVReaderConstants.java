@@ -1,12 +1,12 @@
 package com.nagarro.constants;
 
 /**
- * The Class StringConstants.
+ * The Class CSVReaderConstants.
  */
 public class CSVReaderConstants {
 
 	/**
-	 * Instantiates a new string constants.
+	 * Instantiates a new CSV reader constants.
 	 */
 	private CSVReaderConstants() {
 	}

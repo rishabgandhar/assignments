@@ -25,29 +25,30 @@ public class FlightServiceImpl implements FlightService {
 	/** The flightdao. */
 	private FlightDAO flightdao = new FlightDAOImpl();
 
+	/** The flight service. */
 	private static FlightService flightService = new FlightServiceImpl();
 
+	/**
+	 * Instantiates a new flight service impl.
+	 */
 	private FlightServiceImpl() {
 	}
 
+	/**
+	 * Gets the single instance of FlightServiceImpl.
+	 *
+	 * @return single instance of FlightServiceImpl
+	 */
 	public static FlightService getInstance() {
 		return flightService;
 	}
-	/**
-	 * 
-	 * @see com.nagarro.service.FlightService#setList(java.util.Map)
-	 */
+	
 	@Override
 	public void setList(List<Flight> flights) {
 
 		flightdao.setList(flights);
 	}
 
-	/**
-	 * 
-	 * @see com.nagarro.service.FlightService#getSortedList(java.lang.String,
-	 *      java.lang.String)
-	 */
 	@Override
 	public List<Flight> getSortedList(String key, String userInput) {
 		String option = userInput
@@ -64,10 +65,6 @@ public class FlightServiceImpl implements FlightService {
 		return flights;
 	}
 
-	/**
-	 * @see com.nagarro.service.FlightService#getValidFlights(java.util.List,
-	 *      java.lang.String)
-	 */
 	@Override
 	public List<Flight> getValidFlights(List<Flight> flights, String userInput) {
 		int index = userInput.lastIndexOf(DELIMITER);

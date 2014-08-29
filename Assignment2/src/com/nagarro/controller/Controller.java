@@ -22,9 +22,6 @@ public class Controller {
 
 	/**
 	 * Start.
-	 *
-	 * @param flightService
-	 *            the flight service
 	 */
 	public void start() {
 		UserOutput.display(ConsoleMessages.WELCOME_USER);

@@ -13,9 +13,6 @@ import com.nagarro.model.Flight;
  */
 public class SortByDurationAndFare implements Comparator<Flight> {
 
-	/**
-	 * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
-	 */
 	@Override
 	public int compare(Flight o1, Flight o2) {
 		int difference = EQUAL_RESULT;

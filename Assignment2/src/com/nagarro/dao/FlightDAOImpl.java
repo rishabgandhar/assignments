@@ -13,12 +13,9 @@ import com.nagarro.model.Flight;
  */
 public class FlightDAOImpl implements FlightDAO {
 
-	/** The map. */
+	/** The flight map. */
 	private Map<String, List<Flight>> flightMap = new HashMap<String, List<Flight>>();
 
-	/**
-	 * @see com.nagarro.dao.FlightDAO#setList(java.util.Map)
-	 */
 	@Override
 	public void setList(List<Flight> flights) {
 		for (Flight flight : flights) {
@@ -36,9 +33,6 @@ public class FlightDAOImpl implements FlightDAO {
 		}
 	}
 
-	/**
-	 * @see com.nagarro.dao.FlightDAO#getList(java.lang.String)
-	 */
 	@Override
 	public List<Flight> getList(String key) {
 		return flightMap.get(key);
