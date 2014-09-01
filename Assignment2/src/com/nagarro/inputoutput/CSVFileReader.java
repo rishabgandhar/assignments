@@ -86,7 +86,7 @@ public class CSVFileReader {
 		if (file.exists() && file.isDirectory()) {
 			File[] list = file.listFiles();
 			for (File currentFile : list) {
-				if (isValidAndModified(currentFile)) {
+				if (isValidAndModifiedFile(currentFile)) {
 					String airlineName = currentFile.getName().substring(0,
 							currentFile.getName().indexOf("."));
 					FileReader fr = new FileReader(currentFile);
@@ -132,7 +132,7 @@ public class CSVFileReader {
 	 *            the file
 	 * @return true, if is valid and modified
 	 */
-	public boolean isValidAndModified(File file) {
+	public boolean isValidAndModifiedFile(File file) {
 		boolean isValidAndModified = false;
 		if ((file.getName().endsWith(FILE_EXTENSION))
 				&& ((!fileMap.containsKey(file) || fileMap.get(file).before(
