@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 28, 2014 11:23:52 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.nagarro.model.Flight" table="FLIGHTS">
+        <id name="flightId" type="java.lang.Integer">
+            <column name="FLIGHTID" />
+            <generator class="native" />
+        </id>
+        <property name="airlineName" type="java.lang.String">
+            <column name="AIRLINENAME" />
+        </property>
+        <property name="flightNumber" type="java.lang.String">
+            <column name="FLIGHTNUMBER" />
+        </property>
+        <property name="flightDeparture" type="java.lang.String">
+            <column name="FLIGHTDEPARTURE" />
+        </property>
+        <property name="flightArrival" type="java.lang.String">
+            <column name="FLIGHTARRIVAL" />
+        </property>
+        <property name="validTill" type="java.sql.Date">
+            <column name="VALIDTILL" />
+        </property>
+        <property name="flightTime" type="java.lang.String">
+            <column name="FLIGHTTIME" />
+        </property>
+        <property name="flightDuration" type="java.lang.Double">
+            <column name="FLIGHTDURATION" />
+        </property>
+        <property name="flightFare" type="java.lang.Double">
+            <column name="FLIGHTFARE" />
+        </property>
+        <property name="flightAvailability" type="java.lang.Boolean">
+            <column name="FLIGHTAVAILABILITY" />
+        </property>
+        <property name="flightClass" type="java.lang.String">
+            <column name="FLIGHTCLASS" />
+        </property>
+    </class>
+</hibernate-mapping>

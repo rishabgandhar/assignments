@@ -1,0 +1,10 @@
+2014-09-10 15:42:44,614 - com.nagarro.discountStrategy.DiscountStrategy - ERROR - Error Message
+java.lang.NullPointerException
+	at com.nagarro.discountStrategy.wrapper.DiscountWrapper.calculateBill(DiscountWrapper.java:22)
+	at com.nagarro.controller.Controller.start(Controller.java:25)
+	at com.nagarro.main.Main.main(Main.java:7)
+2014-09-10 15:48:38,644 - com.nagarro.discountStrategy.DiscountStrategy - ERROR - Error Message
+java.lang.NullPointerException
+	at com.nagarro.discountStrategy.wrapper.DiscountWrapper.calculateBill(DiscountWrapper.java:22)
+	at com.nagarro.controller.Controller.start(Controller.java:25)
+	at com.nagarro.main.Main.main(Main.java:7)
