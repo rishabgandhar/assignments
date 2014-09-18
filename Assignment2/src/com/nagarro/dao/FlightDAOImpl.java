@@ -9,11 +9,7 @@ import com.nagarro.constants.CSVReaderConstants;
 import com.nagarro.model.Flight;
 
 /**
- * This class is an implementation of FlightDAO and acts as a Flight Data Access
- * Object class
- * 
- * @author rishabgandhar
- *
+ * The Class FlightDAOImpl.
  */
 public class FlightDAOImpl implements FlightDAO {
 
@@ -42,8 +38,13 @@ public class FlightDAOImpl implements FlightDAO {
 	}
 
 	/**
-	 * Returns True if a flight already exists in a list of flights.
-	 * 
+	 * Returns True if a flight exists in a list of Existing Flights
+	 *
+	 * @param flight
+	 *            the flight
+	 * @param existingFlights
+	 *            the existing flights
+	 * @return true, if successful
 	 */
 	private boolean exists(Flight flight, List<Flight> existingFlights) {
 		boolean isExists = false;
