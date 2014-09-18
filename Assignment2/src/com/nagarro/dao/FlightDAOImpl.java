@@ -9,7 +9,11 @@ import com.nagarro.constants.CSVReaderConstants;
 import com.nagarro.model.Flight;
 
 /**
- * The Class FlightDAOImpl.
+ * This class is an implementation of FlightDAO and acts as a Data Access Object
+ * class
+ * 
+ * @author rishabgandhar
+ *
  */
 public class FlightDAOImpl implements FlightDAO {
 

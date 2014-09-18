@@ -6,6 +6,8 @@ import com.nagarro.model.Flight;
 
 /**
  * The Class UserOutput that shows the list of available Flights to the user.
+ * 
+ * @author rishabgandhar
  */
 public class UserOutput {
 
