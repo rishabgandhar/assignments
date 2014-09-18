@@ -28,11 +28,11 @@ import com.nagarro.util.DateParser;
 import com.nagarro.util.FlightDataValidation;
 
 /**
- * The Class CSVFileReader.
+ * The Class CSVFileReader which reads the CSV files from the drive.
  */
 public class CSVFileReader {
 
-	/** The files. */
+	/** The fileMap containing list of all read files with date of reading. */
 	private Map<File, Date> fileMap = new HashMap<>();
 
 	/**
@@ -42,7 +42,7 @@ public class CSVFileReader {
 	 *            the data
 	 * @param flightClassIndex
 	 *            the flight class index
-	 * @return single instance of CSVFileReader
+	 * @return single instance of Flight
 	 */
 	public static Flight getInstance(String data[], int flightClassIndex) {
 		Flight flight = new Flight();
@@ -74,7 +74,7 @@ public class CSVFileReader {
 	}
 
 	/**
-	 * Read.
+	 * Reads the CSV File.
 	 *
 	 * @throws Exception
 	 *             the exception
@@ -126,11 +126,11 @@ public class CSVFileReader {
 	}
 
 	/**
-	 * Checks if is valid and modified.
+	 * Checks if a file is valid and modified.
 	 *
 	 * @param file
 	 *            the file
-	 * @return true, if is valid and modified
+	 * @return true, if file is valid and modified
 	 */
 	public boolean isValidAndModifiedFile(File file) {
 		boolean isValidAndModified = false;

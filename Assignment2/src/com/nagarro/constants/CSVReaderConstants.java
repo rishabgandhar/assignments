@@ -3,7 +3,7 @@ package com.nagarro.constants;
 /**
  * The Class CSVReaderConstants.
  */
-public class CSVReaderConstants {
+public final class CSVReaderConstants {
 
 	/**
 	 * Instantiates a new CSV reader constants.

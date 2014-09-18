@@ -6,9 +6,13 @@ import com.nagarro.constants.CSVReaderConstants;
 import com.nagarro.constants.ConsoleMessages;
 import com.nagarro.constants.GenericConstants;
 
+/**
+ * The Class FlightDataValidation validates the data read from the CSV File.
+ */
 public class FlightDataValidation {
+
 	/**
-	 * Valid flight data.
+	 * Validates the flight data.
 	 *
 	 * @param airline
 	 *            the airline

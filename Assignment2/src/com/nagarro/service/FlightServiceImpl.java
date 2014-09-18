@@ -18,7 +18,11 @@ import com.nagarro.model.Flight;
 import com.nagarro.util.SortByDurationAndFare;
 
 /**
- * The Class FlightServiceImpl.
+ * This class is an implementation of FlightSerice and acts as a Flight Service
+ * class
+ * 
+ * @author rishabgandhar
+ *
  */
 public class FlightServiceImpl implements FlightService {
 

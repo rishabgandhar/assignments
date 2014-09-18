@@ -10,16 +10,17 @@ import com.nagarro.inputoutput.CSVFileReader;
 import com.nagarro.inputoutput.UserOutput;
 
 /**
- * The Class Scheduler.
+ * This class is the scheduler class and runs after every 10 seconds to read new
+ * CSV Files.
+ * 
+ * @author rishabgandhar
+ *
  */
 public class Scheduler extends TimerTask {
 
 	/** The csv filereader. */
 	CSVFileReader csvFilereader = new CSVFileReader();
 
-	/* (non-Javadoc)
-	 * @see java.util.TimerTask#run()
-	 */
 	@Override
 	public void run() {
 		try {
@@ -30,7 +31,7 @@ public class Scheduler extends TimerTask {
 	}
 
 	/**
-	 * Read files.
+	 * Read new CSV files.
 	 */
 	public void readFiles() {
 		try {

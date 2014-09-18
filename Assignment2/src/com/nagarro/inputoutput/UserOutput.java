@@ -5,12 +5,12 @@ import java.util.List;
 import com.nagarro.model.Flight;
 
 /**
- * The Class UserOutput.
+ * The Class UserOutput that shows the list of available Flights to the user.
  */
 public class UserOutput {
 
 	/**
-	 * Display.
+	 * Display the message.
 	 *
 	 * @param message
 	 *            the message
@@ -20,7 +20,7 @@ public class UserOutput {
 	}
 
 	/**
-	 * Display flights.
+	 * Display list of flights.
 	 *
 	 * @param flights
 	 *            the flights

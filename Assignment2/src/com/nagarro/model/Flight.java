@@ -7,7 +7,12 @@ import static com.nagarro.constants.NumericConstants.POSITIVE_RESULT;
 import java.util.Date;
 
 /**
- * The Class Flight.
+ * This class defines the design of a flight with attributes Airline Name,Flight
+ * Number,Flight Departure,Flight Arrival,Validity Date, Flight Time,Flight
+ * Duration, Flight Fare, Availability and its class.
+ * 
+ * @author rishabgandhar
+ *
  */
 public class Flight implements Comparable<Flight> {
 
@@ -231,9 +236,6 @@ public class Flight implements Comparable<Flight> {
 		this.flightClass = flightClass;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Comparable#compareTo(java.lang.Object)
-	 */
 	@Override
 	public int compareTo(Flight o) {
 		int difference = EQUAL_RESULT;

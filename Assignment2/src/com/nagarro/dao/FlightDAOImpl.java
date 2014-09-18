@@ -1,20 +1,24 @@
 package com.nagarro.dao;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.nagarro.constants.CSVReaderConstants;
 import com.nagarro.model.Flight;
 
 /**
- * The Class FlightDAOImpl.
+ * This class is an implementation of FlightDAO and acts as a Flight Data Access
+ * Object class
+ * 
+ * @author rishabgandhar
+ *
  */
 public class FlightDAOImpl implements FlightDAO {
 
 	/** The flight map. */
-	private Map<String, List<Flight>> flightMap = new HashMap<String, List<Flight>>();
+	private Map<String, List<Flight>> flightMap = new ConcurrentHashMap<String, List<Flight>>();
 
 	@Override
 	public void setList(List<Flight> flights) {
@@ -37,8 +41,12 @@ public class FlightDAOImpl implements FlightDAO {
 		}
 	}
 
+	/**
+	 * Returns True if a flight already exists in a list of flights.
+	 * 
+	 */
 	private boolean exists(Flight flight, List<Flight> existingFlights) {
-		boolean existingFlight = false;
+		boolean isExists = false;
 		for (Flight currentFlight : existingFlights) {
 			if (currentFlight.getFlightNumber().equalsIgnoreCase(
 					flight.getFlightNumber())
@@ -46,11 +54,11 @@ public class FlightDAOImpl implements FlightDAO {
 							flight.getFlightTime())
 					&& currentFlight.getFlightClass().equalsIgnoreCase(
 							flight.getFlightClass())) {
-				existingFlight = true;
+				isExists = true;
 				break;
 			}
 		}
-		return existingFlight;
+		return isExists;
 	}
 
 	@Override

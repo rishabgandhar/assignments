@@ -3,7 +3,7 @@ package com.nagarro.constants;
 /**
  * The Class ConsoleMessages.
  */
-public class ConsoleMessages {
+public final class ConsoleMessages {
 
 	/**
 	 * Instantiates a new console messages.

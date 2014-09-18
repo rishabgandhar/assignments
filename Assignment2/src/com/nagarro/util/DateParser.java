@@ -8,12 +8,12 @@ import java.util.Date;
 import com.nagarro.constants.CSVReaderConstants;
 
 /**
- * The Class DateParser.
+ * The Class DateParser parses the date in the required format.
  */
 public class DateParser {
 
 	/**
-	 * Parses the date.
+	 * Parses the date in required Format.
 	 *
 	 * @param date
 	 *            the date

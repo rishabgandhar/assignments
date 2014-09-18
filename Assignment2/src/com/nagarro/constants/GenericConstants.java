@@ -3,7 +3,7 @@ package com.nagarro.constants;
 /**
  * The Class GenericConstants.
  */
-public class GenericConstants {
+public final class GenericConstants {
 
 	/** The Constant INITIALIZE_STRING. */
 	public static final String INITIALIZE_STRING = "";

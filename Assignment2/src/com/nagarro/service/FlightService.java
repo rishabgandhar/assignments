@@ -5,20 +5,24 @@ import java.util.List;
 import com.nagarro.model.Flight;
 
 /**
- * The Interface FlightService.
+ * This interface defines the standards for a class to implement itself as an
+ * Flight Service implementing business logic
+ * 
+ * @author rishabgandhar
+ *
  */
 public interface FlightService {
 
 	/**
-	 * Sets the list.
+	 * Sets the list of flights to the flight map.
 	 *
-	 * @param map
+	 * @param flightMap
 	 *            the new list
 	 */
-	public void setList(List<Flight> map);
+	public void setList(List<Flight> flightMap);
 
 	/**
-	 * Gets the sorted list.
+	 * Gets the sorted list of flights from the flight Map based on the key.
 	 *
 	 * @param key
 	 *            the key
@@ -29,7 +33,7 @@ public interface FlightService {
 	public List<Flight> getSortedList(String key, String userInput);
 
 	/**
-	 * Gets the valid flights.
+	 * Gets the list of valid flights based on validity date and availability.
 	 *
 	 * @param flights
 	 *            the flights

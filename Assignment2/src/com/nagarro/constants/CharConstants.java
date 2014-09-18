@@ -3,7 +3,7 @@ package com.nagarro.constants;
 /**
  * The Class CharConstants.
  */
-public class CharConstants {
+public final class CharConstants {
 
 	/**
 	 * Instantiates a new char constants.

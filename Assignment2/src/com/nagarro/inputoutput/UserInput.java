@@ -6,21 +6,21 @@ import com.nagarro.constants.GenericConstants;
 import com.nagarro.util.ConsoleInput;
 
 /**
- * The Class UserInput.
+ * The Class UserInput takes Input regarding flights from the User.
  */
 public class UserInput {
 
 	/**
-	 * Input.
+	 * Takes the Input From The User.
 	 *
-	 * @return the string
+	 * @return the input string
 	 */
 	public static String input() {
-		String departureStation = ConsoleInput.getDepStn();
-		String arrivalStation = ConsoleInput.getArrStn();
+		String departureStation = ConsoleInput.getDepartureStation();
+		String arrivalStation = ConsoleInput.getArrivalStation();
 		String flightDate = ConsoleInput.getJourneyDate();
 		String flightClass = ConsoleInput.getFlightClass();
-		String sortOption = ConsoleInput.getSortOption();
+		String sortOption = ConsoleInput.getSortingOption();
 		String finalInputString = departureStation + DELIMITER + arrivalStation
 				+ DELIMITER + flightClass + DELIMITER + flightDate + DELIMITER
 				+ sortOption;
@@ -30,7 +30,7 @@ public class UserInput {
 	/**
 	 * Checks for more queries.
 	 *
-	 * @return true, if successful
+	 * @return true, if more queries
 	 */
 	public static boolean hasMoreQueries() {
 		boolean status;

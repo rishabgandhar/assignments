@@ -18,12 +18,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
- * The Class InputValidation.
+ * The Class InputValidation validates the input entered by the user.
  */
 public class InputValidation {
 
 	/**
-	 * Validate station name.
+	 * Validates the arrival and departure station name.
 	 *
 	 * @param stnName
 	 *            the stn name
@@ -47,7 +47,7 @@ public class InputValidation {
 	}
 
 	/**
-	 * Validate date format.
+	 * Validate the date format.
 	 *
 	 * @param date
 	 *            the date
@@ -68,7 +68,7 @@ public class InputValidation {
 	}
 
 	/**
-	 * Validate flight class.
+	 * Validate the flight class.
 	 *
 	 * @param flightClass
 	 *            the flight class
@@ -87,7 +87,7 @@ public class InputValidation {
 	}
 
 	/**
-	 * Validate sort option.
+	 * Validates the sorting option.
 	 *
 	 * @param sortOption
 	 *            the sort option
@@ -106,7 +106,7 @@ public class InputValidation {
 	}
 
 	/**
-	 * Validate input.
+	 * Validates the arrival and departure location not to be the same.
 	 *
 	 * @param userInput
 	 *            the user input

@@ -3,7 +3,7 @@ package com.nagarro.constants;
 /**
  * The Class NumericConstants.
  */
-public class NumericConstants {
+public final class NumericConstants {
 	
 	/**
 	 * Instantiates a new numeric constants.

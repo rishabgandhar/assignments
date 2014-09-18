@@ -9,7 +9,8 @@ import java.util.Comparator;
 import com.nagarro.model.Flight;
 
 /**
- * The Class SortByDurationAndFare.
+ * The Class SortByDurationAndFare sorts the list of flights based on the
+ * duration and fare.
  */
 public class SortByDurationAndFare implements Comparator<Flight> {
 

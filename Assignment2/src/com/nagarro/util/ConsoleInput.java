@@ -9,16 +9,16 @@ import java.io.InputStreamReader;
 import com.nagarro.constants.ConsoleMessages;
 import com.nagarro.constants.GenericConstants;
 
-
 /**
- * The Class ConsoleInput.
+ * The Class ConsoleInput takes input from the console and returns it to the
+ * program.
  */
 public class ConsoleInput {
 
 	/**
-	 * Input data.
+	 * Inputs data from the console.
 	 *
-	 * @return the string
+	 * @return the input string
 	 */
 	private static String inputData() {
 		BufferedReader bufferedreader = new BufferedReader(
@@ -33,11 +33,11 @@ public class ConsoleInput {
 	}
 
 	/**
-	 * Gets the dep stn.
+	 * Inputs the departure station.
 	 *
-	 * @return the dep stn
+	 * @return the departure station
 	 */
-	public static String getDepStn() {
+	public static String getDepartureStation() {
 		String depStn = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_DEP_STN);
@@ -54,11 +54,11 @@ public class ConsoleInput {
 	}
 
 	/**
-	 * Gets the arr stn.
+	 * Inputs the arrival station.
 	 *
-	 * @return the arr stn
+	 * @return the arrival station
 	 */
-	public static String getArrStn() {
+	public static String getArrivalStation() {
 		String arrStn = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_ARR_STN);
@@ -75,7 +75,7 @@ public class ConsoleInput {
 	}
 
 	/**
-	 * Gets the flight class.
+	 * Inputs the flight class.
 	 *
 	 * @return the flight class
 	 */
@@ -96,11 +96,11 @@ public class ConsoleInput {
 	}
 
 	/**
-	 * Gets the sort option.
+	 * Inputs the sorting option.
 	 *
-	 * @return the sort option
+	 * @return the sorting option
 	 */
-	public static String getSortOption() {
+	public static String getSortingOption() {
 		String sortOption = GenericConstants.INITIALIZE_STRING;
 		while (true) {
 			System.out.print(ConsoleMessages.ENTER_SORT_OPTION);
@@ -117,7 +117,7 @@ public class ConsoleInput {
 	}
 
 	/**
-	 * Gets the journey date.
+	 * Inputs the journey date.
 	 *
 	 * @return the journey date
 	 */
@@ -138,13 +138,13 @@ public class ConsoleInput {
 	}
 
 	/**
-	 * Gets the user option.
+	 * Inputs the user option.
 	 *
 	 * @return the user option
 	 */
 	public static String getUserOption() {
 		String option = GenericConstants.INITIALIZE_STRING;
-		while(true) {
+		while (true) {
 			System.out.println(ConsoleMessages.ASK_OTHER_QUERY);
 			option = inputData();
 			if (option.equalsIgnoreCase(GenericConstants.YES_OPTION)

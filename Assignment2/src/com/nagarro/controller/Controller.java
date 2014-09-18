@@ -16,12 +16,16 @@ import com.nagarro.util.CreateKeyFromInput;
 import com.nagarro.util.InputValidation;
 
 /**
- * The Class Controller.
+ * This class is the driver class and controls the flow of the program
+ * 
+ * @author rishabgandhar
+ *
  */
 public class Controller {
 
 	/**
-	 * Start.
+	 * Method acts as a dispatcher and calls all the other functions in the
+	 * program
 	 */
 	public void start() {
 		UserOutput.display(ConsoleMessages.WELCOME_USER);
